@@ -1,6 +1,8 @@
 # Gourav Mourya - 3D Portfolio
 
-A highly interactive, modern 3D web portfolio showcasing skills in Data Science, Python, and Web Development. 
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Portfolio-6c3bff?style=for-the-badge&logoColor=white)](https://gouravatgit.github.io/gourav-portfolio/)
+
+A highly interactive, modern 3D web portfolio showcasing skills in Data Science, Python, and Web Development.
 
 ## Features
 - **3D Particles Engine**: Built with Three.js natively rendering an interactive Icosahedron and reacting to cursor movement.
@@ -35,3 +37,9 @@ Finally, open the provided localhost URL (typically `http://localhost:5173/`) in
 npm run build
 ```
 This generates optimized static files inside the `/dist` directory for blazing-fast deployment.
+
+## Live Demo
+
+🌐 **[https://gouravatgit.github.io/gourav-portfolio/](https://gouravatgit.github.io/gourav-portfolio/)**
+
+Deployed automatically via **GitHub Actions** on every push to `master`.
