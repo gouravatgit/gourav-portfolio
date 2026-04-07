@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gourav Mourya | 3D Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- ThreeJS Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+    
+    <!-- Noise Film Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Main UI overlay -->
+    <main class="app-container">
+      <nav class="navbar">
+        <div class="logo">GM.</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact" class="btn-primary">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Dropdown -->
+      <div class="theme-dropdown" id="theme-dropdown">
+        <button class="theme-toggle-btn" id="theme-toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        </button>
+        <div class="theme-options">
+          <button class="theme-btn" data-color1="#22d3ee" data-color2="#a78bfa" style="background: linear-gradient(135deg, #22d3ee, #a78bfa);"></button>
+          <button class="theme-btn" data-color1="#e879f9" data-color2="#fb7185" style="background: linear-gradient(135deg, #e879f9, #fb7185);"></button>
+          <button class="theme-btn" data-color1="#bef264" data-color2="#22d3ee" style="background: linear-gradient(135deg, #bef264, #22d3ee);"></button>
+          <button class="theme-btn" data-color1="#f59e0b" data-color2="#fb7185" style="background: linear-gradient(135deg, #f59e0b, #fb7185);"></button>
+          <button class="theme-btn" data-color1="#8b5cf6" data-color2="#e879f9" style="background: linear-gradient(135deg, #8b5cf6, #e879f9);"></button>
+        </div>
+      </div>
+
+      <section id="hero" class="section glass-section">
+        <div class="hero-content">
+          <p class="subtitle">Data Science Trainee | Pursuing NIELIT A-Level</p>
+          <h1 class="title">Gourav Mourya</h1>
+          <p class="description">IT student pursuing NIELIT A-Level and a Data Science course with hands-on skills in Python, data analytics, DBMS, and web development.</p>
+          <div class="cta-group">
+            <a href="#contact" class="btn-primary">Get in Touch</a>
+            <a href="#skills" class="btn-secondary">View Skills</a>
+          </div>
+        </div>
+        
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="glass-card">
+          <h2>Professional Summary</h2>
+          <p>Seeking an entry-level role in data analysis, software development, or AI-related domains. Completed multiple government-recognised AI certifications and volunteered at the AI Impact Festival 2025.</p>
+          <div class="education">
+            <h3>Education</h3>
+            <ul>
+              <li><strong>Data Science — PMKVY / Skill India & NIELIT</strong> - Pursuing (2025 - Present)</li>
+              <li><strong>DOOAC A Level & O Level (Grade B)</strong> - NIELIT (2023 - Present)</li>
+              <li><strong>B.Sc (IGNOU)</strong> - Pursuing (2024 - Present)</li>
+              <li><strong>Class 12th (Science) & Class 10th</strong> - CBSE (2021 | 2019)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="glass-card">
+          <h2>Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-tag">Python & C++</div>
+            <div class="skill-tag">Data Analysis & Pandas</div>
+            <div class="skill-tag">ML Fundamentals</div>
+            <div class="skill-tag">HTML & Web Development</div>
+            <div class="skill-tag">DBMS</div>
+            <div class="skill-tag">MS Excel / Office</div>
+            <div class="skill-tag">N8N Workflow Automation</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <div class="glass-card">
+          <h2>Experience & Certifications</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">Nov 17-18, 2025</span>
+              <h3>Volunteer at AI Impact Festival 2025</h3>
+              <p>NIELIT & MeitY, New Delhi. Gained exposure to Generative AI and Computer Vision.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2026</span>
+              <h3>Data Analyst Skill Certification</h3>
+              <p>One Roadmap Certification.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2026</span>
+              <h3>AI Appreciate & AI Aware</h3>
+              <p>Completed AI For All - Intel & CBSE / Digital India.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2026</span>
+              <h3>AI for Entrepreneurship</h3>
+              <p>Intel / Skill India Digital Hub.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">Jul 2023</span>
+              <h3>Smart English Basics for Professionals</h3>
+              <p>Great Learning Academy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="glass-card contact-card">
+          <h2>Contact Me</h2>
+          <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:Gouravmourya49@gmail.com">Gouravmourya49@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+918595241970">8595241970</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/gourav-mourya-devloper" target="_blank">linkedin.com/in/gourav-mourya-devloper</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/gouravatgit" target="_blank">github.com/gouravatgit</a></p>
+            <p><strong>Location:</strong> Delhi 110094</p>
+            <p><strong>Languages:</strong> Hindi (Native), English (Professional Proficiency)</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2026 Gourav Mourya. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
